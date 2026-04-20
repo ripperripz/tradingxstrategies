@@ -1,6 +1,6 @@
 const API_BASE_URL = import.meta.env.DEV 
   ? 'http://localhost:3001/api' 
-  : '/_/backend/api';
+  : (import.meta.env.VITE_API_URL || 'https://your-backend-api.com/api');
 
 export const api = {
   // Strategies
